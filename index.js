@@ -12,3 +12,10 @@ hamburgerBtn.onclick = function(e){
         hamburgerBtn.setAttribute('aria-expanded', false)
     }
 }
+document.onkeyup = function(e){
+    if(e.key === 'Escape'){
+        hamburgerBtn.setAttribute('aria-expanded', false) 
+        hamburgerMenu.classList.remove('show-menu')
+        hamburgerBtn.focus()
+    }
+}
