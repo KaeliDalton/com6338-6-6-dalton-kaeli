@@ -2,4 +2,13 @@ var hamburgerBtn = document.querySelector("button.hamburger-btn")
 var hamburgerMenu = document.getElementById('main-menu')
 var menu = document.querySelector('nav')
 
-
+hamburgerBtn.onclick = function(e){
+    hamburgerMenu.classList.toggle('show-menu')
+    hamburgerBtn.focus()
+    if(hamburgerMenu.classList.contains('show-menu')){
+        hamburgerBtn.setAttribute('aria-expanded', true)
+    }
+    else{
+        hamburgerBtn.setAttribute('aria-expanded', false)
+    }
+}
