@@ -19,3 +19,11 @@ document.onkeyup = function(e){
         hamburgerBtn.focus()
     }
 }
+
+document.body.onclick = function(e){
+    if(!menu.contains(e.target)){
+        hamburgerBtn.setAttribute('aria-expanded', false) 
+        hamburgerMenu.classList.remove('show-menu')
+        hamburgerBtn.focus()
+    }
+}
